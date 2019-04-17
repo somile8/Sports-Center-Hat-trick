@@ -1,0 +1,904 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+body {
+  font-size: 62.5%;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  color: #a0a4aa;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: #434688;
+    cursor: pointer;
+}
+strong {
+    font-weight: 700;
+}
+.container {
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+h1 {
+    font-weight: 800;
+    font-size: 2.2em;
+    color: #434688;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-align: center;
+}
+h2, h4 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #000;
+}
+h3 {
+    color: #434688;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: center;
+}
+h4 {
+    text-align: center; 
+}
+p {
+    font-weight: 300;
+    font-size: 1.6em;
+    color: #3b3b3b;
+    line-height: 30px;
+}
+.btn {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #fff;
+    background: #00a651;
+    padding: 6px 27px;
+}
+.btn:hover {
+    color: #00a651;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn-tab {
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #434688;
+}
+.btn-tab:hover,
+.btn-tab.active {
+    background-color: #434688;
+    color: #fff;
+}
+.btn-tab.active:not {
+    background-color: transparent;
+    color: #fff;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+small {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* ======== HEADER ========== */
+header {
+    padding: 13px 0 8px;
+}
+nav {
+    display: table;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #348631;
+    text-align: center;
+    color: #000;
+    z-index: 1;
+}
+nav ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+nav li {
+    background-color: inherit;
+}
+nav a {
+    margin-left: -40px;
+    font-size: 2.6em;
+    font-weight: 800;
+    line-height: 70px;
+    padding: 5px 10px;
+    color: #fff;
+}
+nav .btn {
+    background: #fff;
+    font-weight: 800;
+    font-size: 3em;
+    color: #00a651;
+}
+nav .btn:hover {
+    background: #fff;
+    font-weight: 800;
+    font-size: 3em;
+    color: #434688;
+    cursor: pointer;
+}
+.close {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+}
+.close span {
+    width: 35px;
+    height: 2px;
+    background: black;
+    display: block;
+    transform: rotate(45deg);
+}
+.close span:nth-child(2) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -2px;
+}
+.header-logo img {
+    display: inline-block;
+    width: 35%;
+    height: auto;
+    margin-top: 10px;
+}
+.burger {
+    width: 44px;
+    height: 25px;
+    padding: 5px 0;
+    float: right;
+    margin-top: 6px;
+    border: none;
+    background-color: inherit;
+}
+.burger span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin-top: 9px;
+}
+.burger span:nth-child(1) {
+    margin-top: 0;
+}
+
+/* ======== HEADER END ========== */
+
+/* ======== HERO ========== */
+.hero p {
+    font-size: 1.6em;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+.hero-div {
+    text-align: center;
+    margin-top: -50%;
+    z-index: 2;
+    padding: 20px;
+}
+.hero-btn1 a {
+    align-content: center;
+    margin-left: 78px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.hero {
+    padding-bottom: 0;
+}
+/* ======== HERO END ========== */
+
+/* ======== COURTS AND PRICING ========== */
+.courts-and-pricing {
+    background-color: #54d591;
+}
+.courts-and-pricing h1 {
+    margin-bottom: 20px;
+}
+.courts-and-pricing p {
+    text-align: justify;
+}
+.courts-and-pricing .unstyle-list {
+    padding-left: 0px;
+    column-count: 2;
+}
+.courts-and-pricing .btn {
+    font-size: 1.6em;
+    padding: 6px 20px;
+    text-align: center;
+}
+.court-1, .court-2 {
+    text-align: center;
+    margin: 20px 0px -10px 0px;
+    color: #f34949;
+    font-weight: 600;
+}
+.courts {
+    column-count: 2;
+    margin-right: 40px;
+}
+.courts li img {
+    margin: 5px 20px;
+    width: 140px;
+    height: 80px; 
+}
+.courts a:hover {
+    cursor: zoom-in;
+}
+.text-center {
+    font-weight: 600;
+}
+.courts-and-pricing .book {
+    display: block;
+    max-width: 50%;
+    margin-left: 70px; 
+}
+.c1-description,.c2-description {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/* ======== COURTS AND PRICING END ========== */
+
+/* ======== GALLERY ========== */
+.gallery {
+    background-color: #747272;
+}
+.gallery .tabs {
+    padding-left: 0px;
+    column-count: 2;
+    max-width: 
+}
+.gallery .btn {
+    font-size: 1.6em;
+    padding: 6px 20px;
+    text-align: center;
+}
+.gallery h1 {
+    margin-bottom: 25px;
+}
+.gallery .unstyle-list {
+    padding-left: 0px;
+}
+.gallery img {
+    margin-top: 10px;
+}
+.unstyle-list img {
+    width: 100%;
+    height: 220px;
+}
+.width-2 img {
+    height: auto;
+    display: none;
+}
+.gallery .book {
+    display: block;
+    max-width: 50%;
+    margin-left: 70px;
+    margin-top: 20px; 
+}
+
+/* ======== GALLERY END ========== */
+
+/* ======== ABOUT US ========== */
+.about-us {
+    background-color: #709b74;
+}
+.about-us h4 {
+    font-weight: 600;
+}
+.about-us p {
+    text-align: justify;
+}
+.about-us ul li {
+    font-weight: 600;
+    font-size: 1.6em;
+    list-style: none;
+    color: #000;
+}
+.about-us ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+/* ======== ABOUT US END ========== */
+
+/* ======== LOCATION AND WORKING HOURS ========== */
+.location-and-working-hours {
+    background-color: #72748e;
+}
+.location-and-working-hours h1 {
+    margin-bottom: 30px;
+}
+.location-and-working-hours h5 {
+    color: red;
+    font-size: 1.8em;
+    font-weight: 500;
+    margin: 10px;
+}
+.location-and-working-hours p {
+    margin: 10px;
+}
+.location-and-working-hours .book a {
+    margin-bottom: 20px;
+}
+/* ======== LOCATION AND WORKING HOURS END ========== */
+/* ======== Footer ========== */
+.footer {
+    padding: 25px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.logo-copy-wrap {
+    display: inline-block;
+}
+.logo-copy-wrap small {
+    display: block;
+    color: black;
+}
+.footer ul {
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.footer li a {
+    color: #fff;
+}
+.footer li a:hover {
+    color: #ca3f3f;
+}
+.footer p {
+    font-weight: 600;
+}
+/* ======== Footer END  ========== */
+
+/* ======== Modal  ========== */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+}
+.modal.open {
+    display: block;
+}
+.modal-wrap {
+    max-width: 870px;
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90%;
+    overflow-y: auto;
+}
+.modal-wrap > * {
+    display: inline-block;
+}
+.modal-wrap .close span {
+    background-color: #d6d6d6;
+}
+.modal-wrap h3 {
+    color: #f34949;
+    width: 100%;
+}
+.modal-inner {
+    max-width: 520px;
+    margin: 0 auto;
+}
+legend {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+input {
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+input::placeholder {
+  color: #d6d6d6;
+  font-size: 16px;
+  font-style: italic;
+}
+input:focus {
+    outline: none;
+    border-color: #f34949;
+}
+input.btn {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    padding: 13px 15px;
+}
+ input[type="date"]:before,
+ input[type="time"]:before {
+    content: attr(placeholder) !important;
+    color: #d6d6d6;
+    font-style: italic;
+    margin-right: 0.5em;
+  }
+/* ======== Modal END ========== */
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 370px) {
+.courts-and-pricing .book {
+    display: block;
+    max-width: 50%;
+    margin-left: 85px; 
+}
+.container {
+    margin-right: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+.container {
+    margin-left: 20px;
+}
+.courts-and-pricing .book {
+    display: block;
+    max-width: 40%;
+    margin-left: 120px; 
+}
+.courts li img {
+    margin: 5px 20px;
+    width: 170px;
+    height: 120px;
+}
+.gallery img {
+    margin-top: 10px;
+}
+.gallery .book {
+    display: block;
+    max-width: 40%;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.unstyle-list img {
+    width: 100%;
+    height: 240px;
+}
+.burger {
+    width: 44px;
+    height: 25px;
+    padding: 5px 0;
+    float: right;
+    margin-top: 15px;
+    border: none;
+    background-color: inherit;
+}
+}
+
+@media only screen and (min-width: 768px) {
+.burger {
+    width: 50px;
+    height: 25px;
+    padding: 5px 0;
+    float: right;
+    margin-top: 30px;
+    border: none;
+    background-color: inherit;
+}
+.header-logo img {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    margin-top: 20px;
+}
+.courts-and-pricing .btn-tab {
+    width: 190px;
+}
+.courts-and-pricing .list-right {
+    margin-left: 0;
+    display: inline-block;
+}
+.courts-and-pricing .unstyle-list {
+    padding-left: 0px;
+    column-count: 2;
+    margin-left: 100px;
+}
+.c1-description, .c2-description {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 140px;
+}
+.courts li img {
+    margin: 5px -20px;
+    width: 260px;
+    height: 180px;
+}
+.courts-and-pricing .book {
+    display: block;
+    max-width: 25%;
+    margin-left: 260px;
+}
+.gallery .btn-tab {
+    width: 190px;
+}
+.gallery .unstyle-list {
+    padding-left: 0px;
+    column-count: 2;
+    margin-left: 100px;
+}
+.gallery .pics {
+    margin-left: 0;
+    margin-top: 25px;
+}
+.gallery img {
+    margin-top: 10px;
+}
+.gallery .book {
+    display: block;
+    max-width: 25%;
+    margin-left: 260px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+.header-logo img {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    margin-top: 20px;
+}
+.head-title h1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 3em;
+}
+.courts-and-pricing .unstyle-list {
+    padding-left: 0px;
+    column-count: 2;
+    margin-left: 190px;
+}
+h2 {
+    font-size: 2.4em;
+}
+.c1-description, .c2-description {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 220px;
+}
+.courts li img {
+    margin: 5px -60px;
+    width: 330px;
+    height: 230px;
+}
+h3 {
+    color: #434688;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+}
+.courts-and-pricing .book {
+    display: block;
+    max-width: 25%;
+    margin-left: 355px;
+    font-size: 2em;
+}
+.gallery .unstyle-list {
+    padding-left: 0px;
+    column-count: 2;
+    margin-left: 180px;
+}
+.gallery .pics {
+    margin-left: 0;
+    margin-top: 25px;
+}
+.gallery img {
+    height: 300px;
+}
+.gallery .book {
+    display: block;
+    max-width: 20%;
+    margin-left: 380px;
+}
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.unstyle-list {
+    margin: 0;
+    padding: 0;
+}
+.unstyle-list li::before {
+    display: none;
+}
+.text-center {
+    text-align: center;
+}
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
